@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        .color{
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <h1>Java</h1>
+    <div class="box">
+        <h2 class="heading">heading</h2>
+        <form action="" id="head"></form>
+        
+    </div>
+    <input type="text">
+    <input type="checkbox">
+
+    <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <br />
+    <a href="https://facebook.com" name="you">you</a>
+    <br/>
+    <a href="https://google.com">Google</a>
+    <div>
+        div
+        <button id="1">Click me!</button>
+    </div>
+<!-- thuc hanh -->
+    <div class="main">
+        <form action="" class="form-main" id="form-1">
+            <h3 class="heading-member">Thành Viên Đăng Ký</h3>
+            <p class="label-head">Cùng Nhau Học Lập Trình Và Phải Làm Tốt</p>
+
+            <div class="form">
+                <label for="fullName" class="form-label">Tên Đầy Đủ</label>
+                <input type="text" name="fullname" rules="required" id="fullName" placeholder="VD: Hoàng Trung Thông">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" rules="required|email" placeholder="VD:hoangtrungthongdh@gmail.com">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form">
+                <label for="password" class="form-label">Mật Khẩu</label>
+                <input type="password" name="password" rules="required|min:6" id="password" placeholder="Nhập Mật Khẩu">
+                <span class="form-message"></span>
+            </div>
+
+
+            <!-- <div class="form">
+                <label for="Password-confirmation" class="form-label">Nhập Lại Mật Khẩu</label>
+                <input type="password" name="Password-confirmation" id="Password-confirmation" placeholder="Nhập Lại Mật Khẩu">
+                <span class="form-message"></span>
+            </div> -->
+
+            <!-- <div class="form">
+                <label for="avata" class="form-label">Anh Dai Dien</label>
+                <input type="file" name="avata" id="avata">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form">
+                <label for="province" class="form-label">Tinh/TP</label>
+                <select  name="province" id="province" >
+                    <option value="">--Tinh/TP--</option>
+                    <option value="hni">Ha Noi</option>
+                    <option value="Qb">Quang Binh</option>
+                </select>
+                <span class="form-message"></span>
+            </div>-->
+
+            <div class="form">
+                <label  class="form-label">Gioi Tinh</label>
+                <div>
+                    <input type="radio" rules="required" name="gender"  value="male">
+                     Nam
+                </div>
+                <div>
+                    <input type="radio" rules="required" name="gender" value="female">
+                    Nu
+                </div>
+                <div>
+                    <input type="radio" rules="required" name="gender" value="orther">
+                    Khac
+                </div>
+                <span class="form-message"></span>
+            </div> 
+
+            <button class="btn">Đăng Ký</button>
+        </form>
+    </div>
+<!-- 00000000000000000000000000000000000000000000000000000000000000 -->
+    <div id="toast"></div>
+    <div class="btnn">
+        <button onclick="successToast()" class="node success">Show success toast</button>
+        <button onclick="errorToasr()" class="node warning">Show error toast</button>
+    </div>
+    
+
+    <script>
+        function successToast(){
+            toast({
+                title: 'Success',
+                message: 'After you get up and running, you can place Font Awesome icons just about anywhere,',
+                type: 'success',
+                duration: 3000
+            },'#toast');
+        }
+
+        function errorToasr(){
+            toast({
+                title: 'Error',
+                message: 'After you get up and running, you can place Font Awesome icons just about anywhere,',
+                type: 'error',
+                duration: 3000
+            }, '#toast');
+        }
+    </script>
+<!-- 00000000000000000000000000000000000000000000000000000000000000 -->
+
+    <ul id="comment-box"></ul>
+    <!-- <script src="./testJS.js"></script> -->
+    
+    <script src="./main.js"></script>
+    <!-- <script>
+        Validator({
+            form: '#form-1',
+            errorMessage: '.form-message',
+            dadElement: '.form',
+            rules: [
+                // Validator.isRequired('#fullName'),
+                // Validator.isRequired('#email'),
+                // Validator.isEmail('#email'),
+                // Validator.minLength('#password',6),
+                // Validator.isRequired('#Password-confirmation'),
+                Validator.isRequired('input[name="gender"]'),
+                // Validator.isRequired('#avata'),
+                // Validator.isRequired('#province'),
+                Validator.isComfirmed('#Password-confirmation', function (){
+                    return document.querySelector('#form-1 #password').value;
+                }, 'Mat khau nhap lai ko chinh xac')
+            ],
+            onsubmit: function (data){
+                console.log(data);
+            }
+        });
+    </script> -->
+    <!-- <script>
+       var form=new  Validator('#form-1');
+       form.onsubmit=function(data){
+        console.log(data);
+       }
+    </script> -->
+</body>
+</html>

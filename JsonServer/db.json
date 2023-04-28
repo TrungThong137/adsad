@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "body": "chịu ",
+      "postID": "rồi",
+      "id": 2
+    },
+    {
+      "body": "thong",
+      "postID": "flly",
+      "id": 5
+    },
+    {
+      "body": "alo",
+      "postID": "xi măng",
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

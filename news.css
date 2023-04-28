@@ -1,0 +1,147 @@
+.nav{
+    min-height: 42px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list{
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav-item{
+    color: #333;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* form layout */
+.form-container{
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: violet;
+}
+
+.form_row{
+    padding: 8px 0;
+    display: flex;
+}
+
+.form_input{
+    flex: 1;
+}
+
+.form_lable{
+    min-width: 90px;
+}
+
+/*column*/
+.column{
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+}
+
+.column-item{
+    padding: 0 16px;
+    flex: 1;
+}
+
+.main{
+    flex: 3;
+    order: 1;
+}
+/*dung order de thay doi thu tu*/
+.one{
+    flex: 1;
+}
+
+.two{
+    flex:1;
+}
+
+.feature{
+    margin-top: 37px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+@media (min-width:740px){
+   .feature{
+    flex-direction: row;
+   } 
+}
+
+.feature-item{
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+
+.feature-item:nth-last-child(1){
+    background-color: rgb(192,227,255);
+}
+
+.feature-item:nth-last-child(2){
+    background-color: rgb(227, 255, 192);
+}
+
+.feature-item:nth-last-child(3){
+    background-color: rgb(255, 192, 220);
+}
+
+.swap{
+    background-color: #2a0c0c;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap ;
+}
+
+.wrap{
+    width: 148px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: red;
+}
+
+/*char layout*/
+.chart{
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.item{
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: red;
+    animation: growth ease-in 0.5s;
+}
+
+@keyframes growth{
+    from{
+        opacity: 0;
+        height: calc(var(--percent)-50%);
+    }
+    to{
+        opacity: 1;
+        height: var(--percent);
+    }
+}

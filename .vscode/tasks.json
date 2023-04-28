@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "JsonServer",
+			"problemMatcher": [],
+			"label": "npm: start - JsonServer",
+			"detail": "json-server --watch db.json",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
